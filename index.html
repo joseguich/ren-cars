@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Majestic Rent Cars</title>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wdth,wght@8..144,84.9,700&family=Tilt+Neon&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="container-img">
+                <img class="hide-image" src="img/_Cars.png" alt="">
+            </div>
+        </div>
+        <div class="container-form register">
+            <div class="informacion">
+                <div class="info-childs">
+                    <h2>¡Bienvenido a Majestic Rent Cars!</h2>
+                    <button type="button" class="learn-more sing-in">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Iniciar sesión</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Cierre del div informacion -->
+            <div class="form-information">
+                <div class="form-information-childs">
+                    <h2>Crear una Cuenta</h2>
+                    <div class="icons">
+                        <i class="bx bxl-google"></i>
+                        <i class="bx bxl-facebook-circle"></i>
+                        <i class="bx bxl-instagram"></i>
+                    </div>
+                    <!-- Cierre de icon -->
+                    <p>Usa tu email para registrarte</p>
+                    <form class="form">
+                        <label>
+                            <i class="bx bx-user"></i>
+                            <input
+                                type="text"
+                                name="user"
+                                id="reg_user"
+                                placeholder="Nombre Completo"
+                            >
+                        </label>
+                        <label>
+                            <i class="bx bx-envelope"></i>
+                            <input
+                                type="email"
+                                name="email"
+                                id="reg_email"
+                                placeholder="Correo Electronico"
+                            >
+                        </label>
+                        <label>
+                            <i class="bx bx-lock-alt"></i>
+                            <input
+                                type="password"
+                                name="password"
+                                class="pass-show"
+                                id="reg_password"
+                                placeholder="Contraseña"
+                            >
+                            <span class="toggle-password"></span>
+                        </label>
+                        <button type="submit" class="btn">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- //Iniciar Sesíon -->
+        <div class="container-form login hidden">
+            <div class="informacion">
+                <div class="info-childs">
+                    <h2>¡Bienvenido nuevamente a Majestic Rent Cars!</h2>
+                    <p>Si aun no tienes una cuenta por favor registrese aquí</p>
+                    <button type="button" class="learn-more sing-up">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Registrarse</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Cierre del div informacion -->
+            <div class="form-information">
+                <div class="form-information-childs">
+                    <h2>Iniciar Sesión</h2>
+                    <div class="icons">
+                        <i class="bx bxl-google"></i>
+                        <i class="bx bxl-facebook-circle"></i>
+                        <i class="bx bxl-instagram"></i>
+                    </div>
+                    <!-- Cierre de icon -->
+                    <p>Iniciar Sesión con una cuenta</p>
+                    <form class="form">
+                        <label>
+                            <i class="bx bx-envelope"></i>
+                            <input
+                                type="email"
+                                name="email"
+                                id="user_email"
+                                placeholder="Correo Electronico"
+                            >
+                        </label>
+                        <label>
+                            <i class="bx bx-lock-alt"></i>
+                            <input
+                                type="password"
+                                name="password"
+                                class="pass-show"
+                                id="user_password"
+                                placeholder="Contraseña"
+                            >
+                            <span class="toggle-password"></span>
+                        </label>
+                        <div class="form-olvidar">
+                            <a href="#">Olvidaste tu contraseña?</a>
+                        </div>
+                        <button type="submit" class="btn">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

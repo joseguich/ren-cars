@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wdth,wght@8..144,84.9,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rokkitt:ital,wght@0,100..900;1,100..900&family=Tilt+Neon&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("/img/_Cars.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 800;
+}
+
+
+/* Disponible para dispositivo moviles */
+
+.container {
+  display: none;
+}
+
+.hide-image {
+  display: none;
+}
+
+.container-form {
+  max-width: 1000px;
+  height: 500px;
+  display: flex;
+  border-radius: 20px;
+  transition: all 1s ease;
+  margin: 10px;
+  -webkit-box-shadow: 18px 28px 83px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 18px 28px 83px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 18px 28px 83px -5px rgba(0, 0, 0, 0.75);
+}
+
+.hidden {
+  position: absolute;
+  transform: translateY(-300%);
+}
+
+.informacion {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #454b54d5;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.info-childs {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.info-childs h2 {
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+}
+
+.info-childs p {
+  margin: 15px 0;
+  text-align: center;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.form-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+  background-color: #ffffffd5;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.form-information-childs {
+  padding: 0 30px;
+}
+
+.form-information-childs h2 {
+  color: #000000;
+  font-size: 2rem;
+}
+
+.form-information-childs p {
+  color: #000000;
+}
+
+.icons {
+  margin: 15px 0;
+}
+
+.icons i {
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #000000;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.62);
+  border: solid thin #9191bd;
+}
+
+.icons i:hover {
+  background-color: #e62f13;
+  color: #FFF;
+}
+
+.icons i:nth-child(2):hover {
+  background-color: blue;
+}
+
+.icons i:nth-child(3):hover {
+  background-color: rgb(231, 17, 135);
+}
+
+.form {
+  margin: 30px 0 0 0;
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  padding: 0 10px;
+  /* box-shadow: 0 5px 7px rgb(0, 0, 0); */
+}
+
+.form label input {
+  width: 400px;
+  padding: 12px 0;
+  padding-left: 40px;
+  font-size: 16px;
+  font-family: inherit;
+  box-shadow: 0 0 0 1px #0041b1bf;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffffa4;
+  transition: all .3s;
+}
+
+.form label input::placeholder {
+  color: #000000;
+  font-size: 16px;
+  line-height: 0;
+}
+
+.form label input:focus {
+  outline: none;
+  box-shadow: 0 0 10px 1px #0041b1bf;
+  border: none;
+  transition: all .3s;
+}
+
+.form label i {
+  position: absolute;
+  padding-left: 10px;
+  color: #000000d8;
+}
+
+.toggle-password {
+  position: relative;
+  color: #000;
+  right: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* Button */
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 2.5rem;
+  color: #f5f5f5;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fff;
+}
+
+
+/* Button register */
+
+.btn {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: rgb(0, 0, 0);
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  color: #fff;
+}
+
+.btn:hover {
+  letter-spacing: 3px;
+  background-color: hsl(208, 100%, 50%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(0, 115, 255) 0px 7px 29px 0px;
+}
+
+.btn:active {
+  letter-spacing: 3px;
+  background-color: hsl(215, 100%, 50%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(0, 128, 255) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.form-olvidar {
+  margin-bottom: 10px;
+}
+
+.form-olvidar a {
+  text-decoration: none;
+  color: #565454a9;
+  transition: all .3s ease;
+}
+
+.form-olvidar a:hover {
+  border-bottom: solid 2px #00ff;
+  color: #00ff;
+  border-bottom-left-radius: 10px;
+}
+
+
+/* Estilos generales */
+
+@media only screen and (max-width: 768px) {
+
+  /* Ajuste general para dispositivos móviles */
+  .container-form {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .informacion,
+  .form-information {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .form-information {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #f5f5f5;
+  }
+
+  .info-childs,
+  .informacion {
+    padding: 20px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #4e505a;
+  }
+
+  .info-childs,
+  .form-information-childs {
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .form-information-childs h2 {
+    font-size: 18px;
+  }
+
+  .info-childs h2 {
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  .info-childs p {
+    display: none;
+  }
+
+  .sing-in {
+    font-size: 12px;
+  }
+
+  .btn {
+    margin: 20px 0;
+  }
+
+  .form label input {
+    width: 100%;
+  }
+
+  .form-olvidar {
+    margin-bottom: 0;
+  }
+}
+
+
+/* Ajustes específicos si es necesario */
+
+
+/* Por ejemplo, si deseas cambiar el tamaño del botón en dispositivos móviles */
+
+@media only screen and (max-width: 480px) {
+  button.learn-more {
+    width: 10rem;
+  }
+}
